@@ -14,7 +14,7 @@ export class KeycloakService {
     const options = {
         variables: {
           params: {
-            value: user,
+            value: JSON.stringify(user),
             type: 'String',
           }
         },

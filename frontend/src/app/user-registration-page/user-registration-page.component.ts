@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { User } from '../user';
@@ -12,7 +12,7 @@ import {KeycloakService} from '../keycloak.service';
 export class UserRegistrationPageComponent implements OnInit {
   userForm: FormGroup;
   user: User = new User();
-
+  message: string = '';
 
   // Объект с ошибками, которые будут выведены в пользовательском интерфейсе
   formErrors = {
@@ -73,6 +73,7 @@ export class UserRegistrationPageComponent implements OnInit {
       ]],
       'password': [this.user.password, [
         Validators.required,
+        Validators.minLength(8)
       ]]
     });
 
@@ -103,7 +104,8 @@ export class UserRegistrationPageComponent implements OnInit {
   onSubmit() {
     console.log('submitted');
     console.log(this.userForm.value);
-    this.ks.userRegistration(this.userForm.value).subscribe(data => console.log(data), error => console.log(error));
+    this.ks.userRegistration(this.userForm.value).subscribe(data => {
+      console.log(data); this.message = data; }, error =>  {this.message = error; console.log(error); });
   }
 
 }
