@@ -8,14 +8,15 @@ package com.example.registrationprocess.services;
 
 import com.example.registrationprocess.dto.UserData;
 import com.example.registrationprocess.services.keycloak.KeycloakService;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.base.Strings;
 import lombok.extern.slf4j.Slf4j;
 import org.camunda.bpm.engine.delegate.BpmnError;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import com.google.common.base.Strings;
 
 import static org.camunda.spin.Spin.JSON;
 
