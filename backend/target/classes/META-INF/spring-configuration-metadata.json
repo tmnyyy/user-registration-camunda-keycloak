@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "keycloak",
+      "type": "com.example.registrationprocess.config.KeycloakSettings",
+      "sourceType": "com.example.registrationprocess.config.KeycloakSettings"
+    }
+  ],
+  "properties": [
+    {
+      "name": "keycloak.auth-server-url",
+      "type": "java.lang.String",
+      "sourceType": "com.example.registrationprocess.config.KeycloakSettings"
+    },
+    {
+      "name": "keycloak.client-id",
+      "type": "java.lang.String",
+      "sourceType": "com.example.registrationprocess.config.KeycloakSettings"
+    },
+    {
+      "name": "keycloak.password",
+      "type": "java.lang.String",
+      "sourceType": "com.example.registrationprocess.config.KeycloakSettings"
+    },
+    {
+      "name": "keycloak.username",
+      "type": "java.lang.String",
+      "sourceType": "com.example.registrationprocess.config.KeycloakSettings"
+    }
+  ],
+  "hints": []
+}

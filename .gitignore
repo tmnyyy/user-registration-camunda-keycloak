@@ -1,0 +1,15 @@
+/backend/out/*
+/backend/logs/*.log
+/backend/.idea
+/backend/.gradle
+/backend/build/*
+/backend/logs
+/frontend/.idea/*
+/frontend/.project
+/frontend/.settings/*
+/frontend/frontend.iml
+
+/.idea/*
+/logs/*
+/frontend/projects/*
+/frontend/node_modules/*

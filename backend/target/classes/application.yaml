@@ -1,0 +1,14 @@
+spring.datasource.url: jdbc:h2:file:./camunda-h2-database
+
+camunda.bpm.admin-user:
+  id: admin
+  password: admin
+
+keycloak:
+  auth-server-url: http://localhost:8080/auth
+  username: admin
+  password: admin
+  client-id: admin-cli
+
+server:
+  port: 8181
