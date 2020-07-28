@@ -51,8 +51,6 @@ public class RegistrationUserServiceTask implements JavaDelegate {
         String params = (String) delegateExecution.getVariable("params");
         UserData userData = new ObjectMapper().readValue(params, UserData.class);
 
-        //UserData userData = JSON(params).mapTo(UserData.class);
-
         if (Strings.isNullOrEmpty(userData.getLogin()) ||
                 Strings.isNullOrEmpty(userData.getPassword()) ||
                 Strings.isNullOrEmpty(userData.getEmail())) {
